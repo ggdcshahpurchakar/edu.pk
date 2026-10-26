@@ -1,0 +1,2192 @@
+/* =========================================================
+   PROFESSIONAL COLLEGE NAVBAR
+========================================================= */
+
+.college-header {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 40, 70, 0.10);
+}
+
+
+/* =========================================================
+   TOP SECONDARY BAR
+========================================================= */
+
+.top-bar {
+    background: #064b78;
+    color: white;
+    min-height: 42px;
+}
+
+.top-bar-inner {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 28px;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-contact {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.top-contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: rgba(255,255,255,0.94);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: color .25s ease;
+}
+
+.top-contact-link:hover {
+    color: #9deaf0;
+}
+
+.top-icon {
+    width: 15px;
+    height: 15px;
+}
+
+
+.top-social {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.social-link {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    border-radius: 50%;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.social-link svg {
+    width: 15px;
+    height: 15px;
+}
+
+.social-link:hover {
+    background: rgba(255,255,255,0.14);
+    color: #9deaf0;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MAIN NAVBAR
+========================================================= */
+
+.main-navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e5edf2;
+}
+
+.navbar-container {
+    max-width: 1400px;
+    min-height: 76px;
+
+    margin: auto;
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.college-logo {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    margin-right: 38px;
+}
+
+.college-logo img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    transition: transform .3s ease;
+}
+
+.college-logo:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.desktop-nav {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+}
+
+.main-nav-link {
+    position: relative;
+
+    height: 76px;
+
+    padding: 0 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: 0;
+
+    color: #163b55;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: .01em;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        color .25s ease,
+        background .25s ease;
+}
+
+.main-nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 12px;
+    right: 12px;
+    bottom: 0;
+
+    height: 3px;
+
+    background: #00aebd;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform .25s ease;
+}
+
+.main-nav-link:hover {
+    color: #007a92;
+}
+
+.main-nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.nav-dropdown {
+    position: relative;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-trigger {
+    gap: 5px;
+}
+
+.dropdown-arrow {
+    width: 15px;
+    height: 15px;
+
+    transition: transform .25s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+
+.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 1px);
+    left: 50%;
+
+    min-width: 225px;
+
+    transform:
+        translateX(-50%)
+        translateY(8px);
+
+    background: #ffffff;
+
+    border: 1px solid #e3ebf0;
+
+    border-radius: 0 0 12px 12px;
+
+    box-shadow:
+        0 18px 40px rgba(15, 53, 75, .14);
+
+    padding: 9px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity .22s ease,
+        transform .22s ease,
+        visibility .22s ease;
+
+    z-index: 100;
+}
+
+
+/* Desktop hover */
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* Dropdown links */
+
+.dropdown-menu > a,
+.dropdown-group > a {
+    display: flex;
+    align-items: center;
+
+    min-height: 40px;
+
+    padding: 9px 13px;
+
+    border-radius: 7px;
+
+    color: #334e60;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        padding-left .2s ease;
+}
+
+.dropdown-menu > a:hover,
+.dropdown-group > a:hover {
+    background: #eef9fa;
+    color: #007c91;
+
+    padding-left: 17px;
+}
+
+
+/* =========================================================
+   ACADEMIC MEGA DROPDOWN
+========================================================= */
+
+.academic-menu {
+    width: 500px;
+    min-width: 500px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+
+    gap: 8px;
+
+    padding: 14px;
+}
+
+.dropdown-group {
+    padding: 4px;
+}
+
+.dropdown-group-title {
+    padding: 9px 12px 8px;
+
+    margin-bottom: 4px;
+
+    color: #075b80;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: .06em;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #edf2f5;
+}
+
+
+/* =========================================================
+   APPLY BUTTON
+========================================================= */
+
+.apply-button {
+    flex-shrink: 0;
+
+    margin-left: 18px;
+
+    min-width: 116px;
+
+    padding: 12px 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f39a18;
+
+    color: white;
+
+    border-radius: 2px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 15px rgba(243,154,24,.20);
+
+    transition:
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.apply-button:hover {
+    background: #d98205;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(243,154,24,.28);
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    margin-left: auto;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #075b80;
+
+    color: white;
+
+    border: 0;
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.mobile-menu-button svg {
+    width: 23px;
+    height: 23px;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+    background: #064b78;
+
+    border-top: 1px solid rgba(255,255,255,.10);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.14);
+}
+
+.mobile-menu-inner {
+    padding: 10px 16px 18px;
+}
+
+
+.mobile-main-link,
+.mobile-dropdown-btn {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+
+    background: transparent;
+
+    border: 0;
+    border-bottom: 1px solid rgba(255,255,255,.09);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-align: left;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.mobile-main-link:hover,
+.mobile-dropdown-btn:hover {
+    background: rgba(255,255,255,.08);
+    color: #9deaf0;
+}
+
+
+.mobile-arrow {
+    width: 17px;
+    height: 17px;
+
+    transition: transform .25s ease;
+}
+
+.mobile-dropdown.open .mobile-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   MOBILE SUBMENU
+========================================================= */
+
+.mobile-submenu {
+    display: none;
+
+    padding: 5px 0 7px 13px;
+
+    border-left: 2px solid #00aebd;
+
+    margin: 4px 0 6px 12px;
+}
+
+.mobile-dropdown.open .mobile-submenu {
+    display: block;
+}
+
+.mobile-submenu a {
+    display: block;
+
+    padding: 9px 12px;
+
+    color: #dbeef3;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        padding-left .2s ease;
+}
+
+.mobile-submenu a:hover {
+    background: rgba(255,255,255,.07);
+    color: #9deaf0;
+
+    padding-left: 17px;
+}
+
+
+.mobile-submenu-title {
+    padding: 11px 12px 5px;
+
+    color: #8de0e8;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: .08em;
+}
+
+
+/* =========================================================
+   MOBILE APPLY BUTTON
+========================================================= */
+
+.mobile-apply-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 16px;
+
+    min-height: 48px;
+
+    background: #f39a18;
+
+    color: white;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: .04em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+.mobile-apply-button:hover {
+    background: #d98205;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1180px) {
+
+    .navbar-container {
+        padding: 0 20px;
+    }
+
+    .college-logo {
+        margin-right: 18px;
+    }
+
+    .desktop-nav {
+        gap: 0;
+    }
+
+    .main-nav-link {
+        padding: 0 8px;
+        font-size: 12px;
+    }
+
+    .main-nav-link::after {
+        left: 8px;
+        right: 8px;
+    }
+
+    .apply-button {
+        margin-left: 10px;
+        min-width: 100px;
+        padding: 11px 13px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .top-bar-inner {
+        padding: 0 15px;
+    }
+
+    .top-contact {
+        gap: 13px;
+    }
+
+    .top-contact-link {
+        font-size: 11px;
+    }
+
+    .top-icon {
+        width: 13px;
+        height: 13px;
+    }
+
+    .navbar-container {
+        min-height: 70px;
+        padding: 0 15px;
+    }
+
+    .college-logo img {
+        width: 54px;
+        height: 54px;
+    }
+
+    .desktop-nav,
+    .apply-button {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+    .top-bar {
+        min-height: auto;
+    }
+
+    .top-bar-inner {
+        min-height: 42px;
+
+        padding: 5px 12px;
+
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 2px;
+    }
+
+    .top-contact {
+        width: 100%;
+        justify-content: center;
+
+        gap: 13px;
+    }
+
+    .top-social {
+        display: none;
+    }
+
+    .top-contact-link {
+        font-size: 10px;
+    }
+
+    .navbar-container {
+        min-height: 66px;
+    }
+
+    .college-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+.page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #abeff8;
+            color: #abeff8;
+        }
+        .faculty-card.hidden {
+            display: none;
+        }
+
+        .page-banner {
+            min-height: 300px;
+        }
+
+        .page-banner img {
+            object-position: center 55%;
+        }
+
+        @media (max-width: 640px) {
+            .page-banner {
+                min-height: 260px;
+            }
+        }
+        /* ================= COLLEGE GALLERY SLIDER ================= */
+
+.gallery-slide {
+    flex: 0 0 33.333333%;
+    padding: 0 8px;
+}
+
+.gallery-slide > div {
+    height: 380px;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .gallery-slide {
+        flex: 0 0 50%;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+    .gallery-slide {
+        flex: 0 0 100%;
+        padding: 0 4px;
+    }
+
+    .gallery-slide > div {
+        height: 350px;
+    }
+
+    .gallery-prev {
+        left: 8px !important;
+    }
+
+    .gallery-next {
+        right: 8px !important;
+    }
+
+}
+/* ==========================================
+   ACADEMIC PROGRAM CARDS
+========================================== */
+
+.program-card {
+    position: relative;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 140, 170, 0.25);
+}
+
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.program-image {
+    position: relative;
+    height: 235px;
+    overflow: hidden;
+}
+
+.program-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+.program-card:hover .program-image img {
+    transform: scale(1.08);
+}
+
+
+/* Dark image overlay */
+
+.program-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(3, 30, 48, 0.65),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   BADGE
+========================================== */
+
+.program-badge {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #087ea4;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.program-content {
+    position: relative;
+
+    padding: 27px 26px 25px;
+}
+
+
+/* Number */
+
+.program-number {
+    position: absolute;
+
+    right: 22px;
+    top: 18px;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+    font-weight: bold;
+
+    color: #f1f5f7;
+
+    transition:
+        color 0.3s ease;
+}
+
+.program-card:hover .program-number {
+    color: #e5f5f8;
+}
+
+
+/* Heading */
+
+.program-content h3 {
+    position: relative;
+
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    color: #075b80;
+
+    margin-bottom: 12px;
+
+    transition:
+        color 0.3s ease;
+}
+
+.program-card:hover .program-content h3 {
+    color: #008ba8;
+}
+
+
+/* Description */
+
+.program-content p {
+    color: #64748b;
+
+    line-height: 1.75;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Subjects */
+
+.program-subjects {
+    padding-top: 17px;
+
+    border-top: 1px solid #edf1f3;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.program-subjects span {
+    color: #09a7b7;
+
+    margin: 0 5px;
+}
+
+
+/* ==========================================
+   MOBILE TOUCH EFFECT
+========================================== */
+
+.program-card:active {
+    transform: scale(0.985);
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 1023px) {
+
+    .program-card {
+        grid-column: span 3 !important;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .program-card {
+        grid-column: span 6 !important;
+
+        border-radius: 18px;
+    }
+
+    .program-image {
+        height: 210px;
+    }
+
+    .program-content {
+        padding: 23px 20px;
+    }
+
+    .program-content h3 {
+        font-size: 24px;
+    }
+
+    .program-card:active .program-image img {
+        transform: scale(1.05);
+    }
+
+}
+
+/* =====================================================
+   MODERN EVENTS GALLERY
+===================================================== */
+
+.events-gallery-section {
+    background: #f7fafc;
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.events-container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+/* Main heading */
+
+.events-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.events-heading span {
+    color: #00b7c7;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.events-heading h2 {
+    font-family: Georgia, serif;
+    color: #075985;
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.events-heading p {
+    color: #64748b;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+/* Event category */
+
+.event-category {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 30px;
+    margin-bottom: 45px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+
+/* Category header */
+
+.category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.category-label {
+    color: #00aebe;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.category-header h3 {
+    color: #075985;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.category-header p {
+    color: #64748b;
+    margin: 0;
+}
+
+
+/* Buttons */
+
+.slider-buttons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.slider-buttons button {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #dbe4ea;
+    border-radius: 50%;
+    background: white;
+    color: #075985;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.slider-buttons button:hover {
+    background: #075985;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* Slider */
+
+.event-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.event-slider {
+    display: flex;
+    gap: 20px;
+    transition: transform .65s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+}
+
+
+/* Cards */
+
+.event-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 0;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(15, 23, 42, .12);
+}
+
+
+/* Images */
+
+.event-image {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    background: #e2e8f0;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .7s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.08);
+}
+
+
+
+/* Tag */
+
+.event-tag {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    background: rgba(255,255,255,.94);
+    color: #075985;
+    padding: 7px 12px;
+    border-radius: 30px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.12);
+}
+
+
+/* Content */
+
+.event-content {
+    padding: 22px;
+}
+
+.event-content small {
+    color: #00aebe;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.event-content h4 {
+    color: #075985;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin: 7px 0 10px;
+}
+
+.event-content p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* Dots */
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 25px;
+}
+
+.slider-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    transition: all .3s ease;
+}
+
+.slider-dot.active {
+    width: 25px;
+    border-radius: 10px;
+    background: #00b7c7;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .event-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 640px) {
+
+    .events-gallery-section {
+        padding: 55px 12px;
+    }
+
+    .events-heading {
+        margin-bottom: 40px;
+    }
+
+    .events-heading h2 {
+        font-size: 32px;
+    }
+
+    .event-category {
+        padding: 18px;
+        border-radius: 18px;
+        margin-bottom: 30px;
+    }
+
+    .category-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .category-header h3 {
+        font-size: 25px;
+    }
+
+    .category-header p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .slider-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .slider-buttons button {
+        width: 42px;
+        height: 42px;
+    }
+
+    .event-card {
+        flex: 0 0 100%;
+    }
+
+    .event-image {
+        height: 230px;
+    }
+
+    .event-content {
+        padding: 18px;
+    }
+}
+
+.announcement-card {
+    background: white;
+    padding: 24px;
+    border-radius: 18px;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+    transition: all .3s ease;
+}
+
+.announcement-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, .10);
+    border-color: #93c5fd;
+}
+
+.icon-box {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    border-radius: 14px;
+    font-size: 25px;
+    margin-bottom: 16px;
+    transition: .3s;
+}
+
+.announcement-card:hover .icon-box {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.announcement-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.announcement-card p {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 5px;
+}
+
+.notice-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    transition: .2s;
+}
+
+.notice-item:hover {
+    background: #f8fafc;
+}
+
+.notice-date {
+    min-width: 52px;
+    text-align: center;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.notice-date span {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.notice-date small {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.view-btn {
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: #1d4ed8;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.view-btn:hover {
+    background: #1e3a8a;
+    transform: translateY(-2px);
+
+}
+
+/* =========================================================
+   XI PROGRAM PAGE
+   Government Girls Degree College Shahpur Chakar
+   ========================================================= */
+
+.page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #abeff8;
+            color: #abeff8;
+        }
+        .faculty-card.hidden {
+            display: none;
+        }
+
+        .page-banner {
+            min-height: 300px;
+        }
+
+        .page-banner img {
+            object-position: center 55%;
+        }
+
+        @media (max-width: 640px) {
+            .page-banner {
+                min-height: 260px;
+            }
+        }
+        /* ================= COLLEGE GALLERY SLIDER ================= */
+
+.gallery-slide {
+    flex: 0 0 33.333333%;
+    padding: 0 8px;
+}
+
+.gallery-slide > div {
+    height: 380px;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .gallery-slide {
+        flex: 0 0 50%;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+    .gallery-slide {
+        flex: 0 0 100%;
+        padding: 0 4px;
+    }
+
+    .gallery-slide > div {
+        height: 350px;
+    }
+
+    .gallery-prev {
+        left: 8px !important;
+    }
+
+    .gallery-next {
+        right: 8px !important;
+    }
+
+}
+/* ==========================================
+   ACADEMIC PROGRAM CARDS
+========================================== */
+
+.program-card {
+    position: relative;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 140, 170, 0.25);
+}
+
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.program-image {
+    position: relative;
+    height: 235px;
+    overflow: hidden;
+}
+
+.program-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+.program-card:hover .program-image img {
+    transform: scale(1.08);
+}
+
+
+/* Dark image overlay */
+
+.program-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(3, 30, 48, 0.65),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   BADGE
+========================================== */
+
+.program-badge {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #087ea4;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.program-content {
+    position: relative;
+
+    padding: 27px 26px 25px;
+}
+
+
+/* Number */
+
+.program-number {
+    position: absolute;
+
+    right: 22px;
+    top: 18px;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+    font-weight: bold;
+
+    color: #f1f5f7;
+
+    transition:
+        color 0.3s ease;
+}
+
+.program-card:hover .program-number {
+    color: #e5f5f8;
+}
+
+
+/* Heading */
+
+.program-content h3 {
+    position: relative;
+
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    color: #075b80;
+
+    margin-bottom: 12px;
+
+    transition:
+        color 0.3s ease;
+}
+
+.program-card:hover .program-content h3 {
+    color: #008ba8;
+}
+
+
+/* Description */
+
+.program-content p {
+    color: #64748b;
+
+    line-height: 1.75;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Subjects */
+
+.program-subjects {
+    padding-top: 17px;
+
+    border-top: 1px solid #edf1f3;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.program-subjects span {
+    color: #09a7b7;
+
+    margin: 0 5px;
+}
+
+
+/* ==========================================
+   MOBILE TOUCH EFFECT
+========================================== */
+
+.program-card:active {
+    transform: scale(0.985);
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 1023px) {
+
+    .program-card {
+        grid-column: span 3 !important;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .program-card {
+        grid-column: span 6 !important;
+
+        border-radius: 18px;
+    }
+
+    .program-image {
+        height: 210px;
+    }
+
+    .program-content {
+        padding: 23px 20px;
+    }
+
+    .program-content h3 {
+        font-size: 24px;
+    }
+
+    .program-card:active .program-image img {
+        transform: scale(1.05);
+    }
+
+}
+
+/* =====================================================
+   MODERN EVENTS GALLERY
+===================================================== */
+
+.events-gallery-section {
+    background: #f7fafc;
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.events-container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+/* Main heading */
+
+.events-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.events-heading span {
+    color: #00b7c7;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.events-heading h2 {
+    font-family: Georgia, serif;
+    color: #075985;
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.events-heading p {
+    color: #64748b;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+/* Event category */
+
+.event-category {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 30px;
+    margin-bottom: 45px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+
+/* Category header */
+
+.category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.category-label {
+    color: #00aebe;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.category-header h3 {
+    color: #075985;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.category-header p {
+    color: #64748b;
+    margin: 0;
+}
+
+
+/* Buttons */
+
+.slider-buttons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.slider-buttons button {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #dbe4ea;
+    border-radius: 50%;
+    background: white;
+    color: #075985;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.slider-buttons button:hover {
+    background: #075985;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* Slider */
+
+.event-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.event-slider {
+    display: flex;
+    gap: 20px;
+    transition: transform .65s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+}
+
+
+/* Cards */
+
+.event-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 0;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(15, 23, 42, .12);
+}
+
+
+/* Images */
+
+.event-image {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    background: #e2e8f0;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .7s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.08);
+}
+
+
+/* Tag */
+
+.event-tag {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    background: rgba(255,255,255,.94);
+    color: #075985;
+    padding: 7px 12px;
+    border-radius: 30px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.12);
+}
+
+
+/* Content */
+
+.event-content {
+    padding: 22px;
+}
+
+.event-content small {
+    color: #00aebe;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.event-content h4 {
+    color: #075985;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin: 7px 0 10px;
+}
+
+.event-content p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* Dots */
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 25px;
+}
+
+.slider-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    transition: all .3s ease;
+}
+
+.slider-dot.active {
+    width: 25px;
+    border-radius: 10px;
+    background: #00b7c7;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .event-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 640px) {
+
+    .events-gallery-section {
+        padding: 55px 12px;
+    }
+
+    .events-heading {
+        margin-bottom: 40px;
+    }
+
+    .events-heading h2 {
+        font-size: 32px;
+    }
+
+    .event-category {
+        padding: 18px;
+        border-radius: 18px;
+        margin-bottom: 30px;
+    }
+
+    .category-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .category-header h3 {
+        font-size: 25px;
+    }
+
+    .category-header p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .slider-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .slider-buttons button {
+        width: 42px;
+        height: 42px;
+    }
+
+    .event-card {
+        flex: 0 0 100%;
+    }
+
+    .event-image {
+        height: 230px;
+    }
+
+    .event-content {
+        padding: 18px;
+    }
+}
+
+.announcement-card {
+    background: white;
+    padding: 24px;
+    border-radius: 18px;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+    transition: all .3s ease;
+}
+
+.announcement-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, .10);
+    border-color: #93c5fd;
+}
+
+.icon-box {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    border-radius: 14px;
+    font-size: 25px;
+    margin-bottom: 16px;
+    transition: .3s;
+}
+
+.announcement-card:hover .icon-box {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.announcement-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.announcement-card p {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 5px;
+}
+
+.notice-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    transition: .2s;
+}
+
+.notice-item:hover {
+    background: #f8fafc;
+}
+
+.notice-date {
+    min-width: 52px;
+    text-align: center;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.notice-date span {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.notice-date small {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.view-btn {
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: #1d4ed8;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.view-btn:hover {
+    background: #1e3a8a;
+    transform: translateY(-2px);
+
+}
+/* =========================================
+   NOTIFICATIONS, CIRCULARS & NOTICES HERO
+========================================= */
+/* FORCE UPDATE: Notifications Hero Background */
+
+section.notice-hero {
+    background: linear-gradient(
+        135deg,
+        #003049 0%,
+        #007f8b 50%,
+        #00a6a6 100%
+    ) !important;
+
+    background-image: linear-gradient(
+        135deg,
+        #003049 0%,
+        #007f8b 50%,
+        #00a6a6 100%
+    ) !important;
+
+    color: #ffffff !important;
+}
+
+section.notice-hero h1,
+section.notice-hero p {
+    color: #ffffff !important;
+}
